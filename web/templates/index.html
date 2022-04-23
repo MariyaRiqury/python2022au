@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+{% block content %}
+<div class = "head">
+  <h1>Привет! Добро пожаловать на мой первый сайт!</h1>
+  <h3>Найди картинку с бенгальской кошкой, среди предложенных ниже:</h3>
+</div>
+<div class = "images">
+<p>
+    1
+  <img src="savanna1.jpg" alt="1" width="300">
+  <img src="serval.jpg" alt="2" width="300">
+    2
+</p>
+<p>
+    3
+<img src="bengal.jpg" alt="3" width="300">
+<img src="toyger.jpg" alt="4" width="300">
+    4
+</p>
+</div>
+
+<div class = "send">
+    <form action="/run" method="POST">
+        <input type="number" size ="1" name="number" min = "1" max = "4"> введите номер картинки<Br>
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+</div>
+
+<div class = "more_inf">
+    <a href="http://127.0.0.1:5000/more">Узнать больше о породах на изображениях</a>;
+</div>
+
+
+{% endblock %}
